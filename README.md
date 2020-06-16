@@ -1,6 +1,20 @@
-### Readme
+### Skip Medium Wall
+
+Simple Chrome extension to skip Medium's login/paywall. Works based on their policy of not displaying a paywall when navigatin in from links that are shared on Twitter.
+
+#### Developing
+
+On your browser open up the extenstions internal page ([here](chrome://extensions/)). On the top right, enable "Developer mode". A few new buttons should appear at the top of the page. Click "Load unpacked". On the file browser select this directory/folder. You're done.
+
+![](readme/ext.png)
+
+Every time you make changes to the source code, reload the extension so the changes take effect. Use the "Errors" page to check for errors and the "background page" to check for everything else.
 
 #### Improvements
+
+##### License
+
+Add a `LICENSE.md`.
 
 ##### Content
 
