@@ -1,8 +1,8 @@
 ### Skip Medium Wall
 
-Simple Chrome extension to skip Medium's login/paywall. Works based on their policy of not displaying a paywall when navigatin in from links that are shared on Twitter.
+Simple Chrome extension to skip Medium's login/paywall. Works based on their policy of not displaying a paywall when navigating in from links that are shared on Twitter.
 
-Note: the extension doesn't currently limit the targets it applies the changes to because there are Medium posts shared through custom domains.
+Note: the extension doesn't currently limit the targets it applies the changes to, because there are Medium posts on custom domains.
 
 #### Developing
 
