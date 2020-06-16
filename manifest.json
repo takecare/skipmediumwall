@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "skipmediumwall",
+  "description": "skip medium's paywall",
+  "version": "0.1",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://*/*",
+    "http://*/*"
+  ]
+}
