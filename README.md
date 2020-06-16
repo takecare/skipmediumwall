@@ -2,6 +2,8 @@
 
 Simple Chrome extension to skip Medium's login/paywall. Works based on their policy of not displaying a paywall when navigatin in from links that are shared on Twitter.
 
+Note: the extension doesn't currently limit the targets it applies the changes to because there are Medium posts shared through custom domains.
+
 #### Developing
 
 On your browser open up the extenstions internal page ([here](chrome://extensions/)). On the top right, enable "Developer mode". A few new buttons should appear at the top of the page. Click "Load unpacked". On the file browser select this directory/folder. You're done.
