@@ -5,6 +5,7 @@ const handler = (details) => {
   return { requestHeaders: newHeaders };
 };
 
+// eslint-disable-next-line no-undef
 chrome.webRequest.onBeforeSendHeaders.addListener(
   handler,
   { urls: ['https://*/*', 'http://*/*'] },
