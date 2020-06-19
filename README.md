@@ -39,7 +39,7 @@ Setup ESLint and Prettier.
 
 ##### Webpack
 
-Setup webpack to have a reproducible way to create a "publishing" bundle for the extension.
+Setup webpack to have a reproducible way of creating a "publishing" bundle for the extension.
 
 #### Resources
 

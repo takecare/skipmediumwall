@@ -1,0 +1,24 @@
+{
+  "name": "skipmediumwall",
+  "version": "0.0.1",
+  "description": "chrome extension to skip medium's walls",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takecare/skipmediumwall.git"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "medium"
+  ],
+  "author": "takecare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takecare/skipmediumwall/issues"
+  },
+  "homepage": "https://github.com/takecare/skipmediumwall#readme"
+}
