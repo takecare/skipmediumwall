@@ -14,7 +14,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 );
 
 chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.sync.set({ doains: ['medium.com'] }, () => {
+  chrome.storage.sync.set({ domains: ['medium.com'] }, () => {
     //
   });
 });
