@@ -46,6 +46,7 @@ Setup webpack to have a reproducible way of creating a "publishing" bundle for t
 ##### Official docs
 
 - [Get started](https://developer.chrome.com/extensions/getstarted)
+- [Design UI](https://developer.chrome.com/extensions/user_interface)
 - [onBeforeSendHeaders](https://developer.chrome.com/extensions/webRequest#event-onBeforeSendHeaders)
 - [No Cookies sample](https://developer.chrome.com/extensions/examples/extensions/no_cookies.zip)
 - [Publishing](https://support.google.com/chrome/a/answer/2714278?hl=en)

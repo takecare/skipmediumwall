@@ -14,7 +14,15 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 );
 
 chrome.runtime.onInstalled.addListener(() => {
+  // TODO load domains from storage
   chrome.storage.sync.set({ domains: ['medium.com'] }, () => {
     //
+  });
+});
+
+chrome.browserAction.onClicked.addListener((tab) => {
+  chrome.browserAction.setTitle({
+    tabId: tab.id,
+    title: `You are on tab: ${tab.id}`,
   });
 });

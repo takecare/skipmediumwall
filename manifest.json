@@ -20,9 +20,10 @@
       "128": "images/icon128.png"
     },
     "default_popup": "menu.html",
-    "default_title": "Press Ctrl(Win)/Command(Mac)+Shift+Right/Left to flip tabs"
+    "default_title": "Skip Wall"
   },
   "permissions": [
+    "activeTab",
     "permissions",
     "webRequest",
     "webRequestBlocking",
