@@ -13,6 +13,8 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
   ['requestHeaders', 'blocking', 'extraHeaders'],
 );
 
+// storage api: https://developer.chrome.com/extensions/storage
+
 chrome.runtime.onInstalled.addListener(() => {
   // TODO load domains from storage
   chrome.storage.sync.set({ domains: ['medium.com'] }, () => {

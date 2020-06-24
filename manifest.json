@@ -24,7 +24,7 @@
   },
   "permissions": [
     "activeTab",
-    "permissions",
+    "storage",
     "webRequest",
     "webRequestBlocking",
     "https://*/*",
