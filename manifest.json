@@ -25,9 +25,10 @@
   "permissions": [
     "activeTab",
     "storage",
+    "cookies",
+    "webNavigation",
     "webRequest",
     "webRequestBlocking",
-    "https://*/*",
-    "http://*/*"
+    "<all_urls>"
   ]
 }
