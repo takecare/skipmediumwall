@@ -2,15 +2,15 @@
 
 // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 const removeCookiesOnLoadCompleted = (details) => {
-  browser.cookies.remove({name: "uid", url: details.url})
+  browser.cookies.remove({ name: 'uid', url: details.url })
     .then()
     .catch(
-      (error) => console.error("Failed to remove 'uid' cookie:", error)
-    )
-}
+      (error) => console.error("Failed to remove 'uid' cookie:", error),
+    );
+};
 
 // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted
-browser.webNavigation.onCompleted.addListener(removeCookiesOnLoadCompleted)
+browser.webNavigation.onCompleted.addListener(removeCookiesOnLoadCompleted);
 
 const addRefererHeader = (details) => {
   const headers = details.requestHeaders;
