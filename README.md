@@ -29,8 +29,6 @@ On your browser open up the extenstions internal page
 A few new buttons should appear at the top of the page. Click "Load unpacked".
 On the file browser select this directory/folder. You're done.
 
-![](readme/ext.png)
-
 Every time you make changes to the source code, reload the extension so the
 changes take effect. Use the "Errors" page to check for errors and the
 "background page" to check for everything else.
