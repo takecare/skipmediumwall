@@ -1,49 +1,47 @@
 ### Skip Medium Wall
 
-Simple Chrome extension to skip Medium's login/paywall. Works based on their policy of not displaying a paywall when navigating in from links that are shared on Twitter.
+Simple browser extension to skip Medium's login/paywall. Works based on two
+things:
 
-Note: the extension doesn't currently limit the targets it applies the changes to, because there are Medium posts on custom domains.
+- their policy of not displaying a paywall when navigating in from links that
+  are shared on Twitter;
+- removing a cookie they seem to rely on to limit the number of articles you can
+  read.
+
+Note: the extension does not limit the targets it applies the changes to,
+this is due to two reasons: Medium runs on other domains (not just medium.com),
+and limiting the extension to only target specificl URLs/domains requires
+releasing a new version every time a new URL/domain needs to be added.
 
 #### Developing
 
-On your browser open up the extenstions internal page ([here](chrome://extensions/)). On the top right, enable "Developer mode". A few new buttons should appear at the top of the page. Click "Load unpacked". On the file browser select this directory/folder. You're done.
+##### Firefox
+
+On your browser, go to [about:debugging](about:debugging#/runtime/this-firefox)
+and click "Load Temporary Add-on...". Open the `manifest.json` file and you
+should be ready to go. Remember to click "Reload" every time you modify the
+extension's code.
+
+##### Chrome
+
+On your browser open up the extenstions internal page
+([here](chrome://extensions/)). On the top right, enable "Developer mode".
+A few new buttons should appear at the top of the page. Click "Load unpacked".
+On the file browser select this directory/folder. You're done.
 
 ![](readme/ext.png)
 
-Every time you make changes to the source code, reload the extension so the changes take effect. Use the "Errors" page to check for errors and the "background page" to check for everything else.
-
-#### Improvements
-
-##### License
-
-Add a `LICENSE.md`.
-
-##### Content
-
-Add the extensions' page.
-
-##### List of targets
-
-Instead of hardcoding the targets for which the extension applies (current
-implementation changes the headers on **ALL** requests), allow the
-user to target custom URLs. This should be available in the extension's
-settings.
-
-##### Setup npm
-
-Setup `npm`.
-
-##### ESLint + Prettier
-
-Setup ESLint and Prettier.
-
-##### Webpack
-
-Setup webpack to have a reproducible way of creating a "publishing" bundle for the extension.
+Every time you make changes to the source code, reload the extension so the
+changes take effect. Use the "Errors" page to check for errors and the
+"background page" to check for everything else.
 
 #### Resources
 
-##### Official docs
+##### Official Firefox docs
+
+**TODO**
+
+##### Official Chrome docs
 
 - [Get started](https://developer.chrome.com/extensions/getstarted)
 - [Design UI](https://developer.chrome.com/extensions/user_interface)
