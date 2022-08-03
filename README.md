@@ -17,10 +17,10 @@ releasing a new version every time a new URL/domain needs to be added.
 
 ##### Firefox
 
-On your browser, go to [about:debugging](about:debugging#/runtime/this-firefox)
-and click "Load Temporary Add-on...". Open the `manifest.json` file and you
-should be ready to go. Remember to click "Reload" every time you modify the
-extension's code.
+On your browser, go to _about:debugging_ - `about:debugging#/runtime/this-firefox` -
+and click the "Load Temporary Add-on..." button. Open the `manifest.json` file
+and you should be ready to go. Remember to click "Reload" every time you modify
+the extension's code.
 
 ##### Chrome
 
