@@ -10,14 +10,14 @@ const logCookies = (details) => {
     })
 }
 
-const completed = (details) => {
-  console.log(">>> COMPLETED!: ")
-  console.log(details)
+const removeCookiesOnLoadCompleted = (details) => {
+  // console.log(details)
   // logCookies()
+  // browser.cookies.remove({name: "uid", url: details.url})
   browser.cookies.remove({name: "uid", url: details.url})
     .then(
       (cookie) => {
-        console.log("> REMOVED COOKIE", cookie)
+        console.log(`> REMOVED COOKIE ON ${details.url}`, cookie);
       }
     )
     .catch(
@@ -26,41 +26,29 @@ const completed = (details) => {
 }
 
 // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted
-browser.webNavigation.onCompleted.addListener(
-  completed,
-)
+browser.webNavigation.onCompleted.addListener(removeCookiesOnLoadCompleted)
 
-// browser.webRequest.onBeforeRequest.addListener(
-//   f,
-//   {urls: ["<all_urls>"]}
-// );
-
-const handler = (details) => {
+const addRefererHeader = (details) => {
   const headers = details.requestHeaders;
-  const newHeaders = headers.filter((h) => h.name.toLowerCase() !== 'referer');
-  newHeaders.push({ name: 'Referer', value: 'https://t.co/xyZXYz12pt' });
-  return { requestHeaders: newHeaders };
+  const referer = headers.find((header) => header.name.toLowerCase() === 'referer')
+    || { name: 'Referer', value: 'https://t.co/xyZXYz12pt' };
+
+  // const newHeaders = headers.filter((header) => header.name.toLowerCase() !== 'referer');
+  // newHeaders.push({ name: 'Referer', value: 'https://t.co/xyZXYz12pt' });
+  headers.push(referer);
+  return { requestHeaders: headers };
 };
 
 browser.webRequest.onBeforeSendHeaders.addListener(
-  handler,
-  // { urls: ['https://*/*', 'http://*/*'] },
+  addRefererHeader,
   { urls: ['<all_urls>'] },
   ['requestHeaders', 'blocking'],
 );
 
 // storage api: https://developer.chrome.com/extensions/storage
-
 browser.runtime.onInstalled.addListener(() => {
   // TODO load domains from storage
   browser.storage.sync.set({ domains: ['medium.com'] }, () => {
     //
-  });
-});
-
-browser.browserAction.onClicked.addListener((tab) => {
-  browser.browserAction.setTitle({
-    tabId: tab.id,
-    title: `You are on tab: ${tab.id}`,
   });
 });
